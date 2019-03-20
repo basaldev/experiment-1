@@ -36,6 +36,7 @@
     "copy-to-clipboard": "^3.0.8",
     "emotion": "^10.0.9",
     "empty": "^0.10.1",
+    "file-loader": "^3.0.1",
     "filestack-js": "^1.14.6",
     "firebase": "^5.9.0",
     "firebaseui": "^3.5.2",

@@ -22,21 +22,6 @@ export class ChatView extends React.Component {
       <div>
         <div
           className={css`
-            height: 20vh;
-          `}
-        >
-          <img
-            src={Doctor}
-            alt="doctor"
-            className={css`
-              display: block;
-              height: 100%;
-              margin: 10px auto;
-            `}
-          />
-        </div>
-        <div
-          className={css`
             padding: 16px;
           `}
         >
@@ -44,7 +29,7 @@ export class ChatView extends React.Component {
             ref="scrollContainer"
             className={css`
               overflow: scroll;
-              height: 60vh;
+              height: 80vh;
             `}
           >
             {this.props.messages.map(message => {

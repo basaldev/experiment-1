@@ -4,13 +4,16 @@ import { Speaker } from 'components/presentational/speaker';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Category from '@material-ui/icons/Category';
 import { css } from 'emotion';
+import * as DoctorImg from 'assets/doctor.png';
+import * as UserImg from 'assets/user2.png';
+
 
 export function Message(direction: any, showSpeaker: boolean, content: any, speaker: string) {
   let icon;
-  if (speaker === 'BOT') {
-    icon = <Category />;
+  if(speaker === 'BOT'){
+    icon = <img className={css`height: 100%;`} src={DoctorImg}></img>
   } else {
-    icon = <AccountCircle />;
+    icon = <img className={css`height: 100%;`} src={UserImg}></img>
   }
   return (
     <Grid
