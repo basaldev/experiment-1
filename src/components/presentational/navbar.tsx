@@ -12,9 +12,9 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { css } from 'emotion';
 export function Navbar(props: any) {
   return (
-    <BottomNavigation value={props.value} showLabels color="primary">
+    <BottomNavigation value={props.value} color="primary">
       <BottomNavigationAction onClick={props.routes[0]} label="Assistant" icon={<ChatIcon />} />
-      <BottomNavigationAction onClick={props.routes[1]} label="Upload Documents" icon={<Assignment />} />
+      <BottomNavigationAction onClick={props.routes[1]} label="My Documents" icon={<Assignment />} />
       <BottomNavigationAction onClick={props.routes[2]} label="Clinics" icon={<AssignmentInd />} />
     </BottomNavigation>
   );

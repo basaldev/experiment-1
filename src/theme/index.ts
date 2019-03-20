@@ -3,14 +3,14 @@ import { gutters } from './variables';
 import { grey } from '@material-ui/core/colors';
 const gradientBackground = 'linear-gradient(180deg, rgba(10,42,119,1) 0%, rgba(4,31,95,1) 100%)';
 
-const palette = {
+export const palette = {
   common: {
     black: '#000',
     white: '#fff',
   },
   primary: {
     light: 'rgba(85, 193, 226)',
-    main: 'rgb(85, 193, 226)',
+    main: '#0700f6',
     dark: 'rgb(85, 193, 226)',
     contrastText: '#fff',
   },
@@ -27,14 +27,14 @@ const palette = {
     contrastText: '#fff',
   },
   text: {
-    primary: 'rgba(0,0,0,0.9)',
-    secondary: 'rgba(0, 0, 0, 0.6)',
-    disabled: 'rgba(0, 0, 0, 0.38)',
+    primary: '#ffffff',
+    secondary: '#ffffff',
+    disabled: '#ffffff',
     hint: 'rgba(0, 0, 0, 0.38)',
   },
   background: {
     default: '#fafafa',
-    paper: '#333'
+    paper: '#000'
   },
   action: {
     active: 'rgba(0, 0, 0, 0.54)',
@@ -66,11 +66,11 @@ export const themeOptions: ThemeOptions = {
     },
     MuiCard: {
       root: {
-        border: '1px solid #e3e5e5',
+        border: 'none',
         marginBottom: '30px',
         marginTop: '10px',
-        color: 'rgba(0, 0, 0, 0.87)',
-        background: '#fff',
+        color: '#fff',
+        background: '#000000',
         width: '100%',
         boxShadow: 'none',
         position: 'relative',

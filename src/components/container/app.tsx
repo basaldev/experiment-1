@@ -64,6 +64,7 @@ export function App() {
         </Grid>
         <Grid item xs={12} style={{ display: currentPage().name !== 'LOGIN' ? 'block' : 'none'}}>
           <Navbar
+            value={currentPage().value}
             routes={[
               e => {
                 navigate('/', e);

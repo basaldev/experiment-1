@@ -5,6 +5,8 @@ import { updateInputText } from 'domain/store/reducers/main'; //TODO move to use
 import SendIcon from '@material-ui/icons/Send';
 import MicIcon from '@material-ui/icons/Mic';
 import { onKeyPressUpdateInputText, pushChat } from 'domain/middleware/user';
+import { palette } from 'theme/index';
+
 export class MessageInput extends React.Component {
   props: {
     sessionAttributes: any;
@@ -31,9 +33,10 @@ export class MessageInput extends React.Component {
   }
   render() {
     return (
-      <Grid container>
+      <Grid container className={css`width: 80%;`}>
         <Grid item xs={12}>
           <TextField
+          className={css`border: 1px solid ${palette.primary.main}; padding: 16px;`}
             variant="outlined"
             placeholder="Send a message"
             onKeyUp={e => {
@@ -44,11 +47,13 @@ export class MessageInput extends React.Component {
               endAdornment: (
                 <InputAdornment position="end">
                   <IconButton
+                    color="primary"
                     onClick={this.handleOnSend}
                   >
                     <MicIcon />
                   </IconButton>
                   <IconButton
+                   color="primary"
                     onClick={this.handleOnSend}
                   >
                     <SendIcon />
