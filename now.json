@@ -1,0 +1,16 @@
+{
+  "name": "ecto-proto",
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  },
+  "alias": [],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "version": 2
+}
