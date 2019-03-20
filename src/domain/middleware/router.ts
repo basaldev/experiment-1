@@ -26,7 +26,7 @@ function loginRouter(onRoute: OnRoute) {
 
 function authMiddleware(ctx, next) {
   const user = store.deref().user;
-  if (user) {
+  if (user.id !== "") {
     logger.info('User authenticated', user);
     next();
   } else {
@@ -49,23 +49,23 @@ export function getImages() {
 export default function startRouters() {
   homeRouter(ctx => {
     logger.debug('Home route');
-    updateCurrentPage({ name: 'HOME_PAGE' });
+    updateCurrentPage({ name: 'HOME_PAGE', value:0 });
   });
 
   secondRouter(ctx => {
     logger.debug('Document route');
-    updateCurrentPage({ name: 'SECOND_PAGE' });
+    updateCurrentPage({ name: 'SECOND_PAGE', value:1 });
     getImages();
   });
 
   thirdRouter(ctx => {
     logger.debug('Document route');
-    updateCurrentPage({ name: 'THIRD_PAGE' });
+    updateCurrentPage({ name: 'THIRD_PAGE', value:2 });
   });
 
   loginRouter(ctx => {
     logger.debug('Document route');
-    updateCurrentPage({ name: 'LOGIN' });
+    updateCurrentPage({ name: 'LOGIN', value: 99 });
   });
 
   page();

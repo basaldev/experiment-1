@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Speaker } from 'components/presentational/speaker';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Category from '@material-ui/icons/Category';
 import { css } from 'emotion';
 import * as DoctorImg from 'assets/doctor.png';
 import * as UserImg from 'assets/user2.png';
@@ -19,15 +17,19 @@ export function Message(direction: any, showSpeaker: boolean, content: any, spea
     <Grid
       container
       key={content + Math.random()}
-      spacing={16}
       direction={direction}
       wrap="nowrap"
       className={css`
         max-width: 100%;
+        font-weight:bold;
+        padding-top: 0;
+
       `}
     >
       <Grid item>{Speaker(showSpeaker, icon)}</Grid>
-      <Grid item>{content}</Grid>
+      <Grid item className={css`
+        line-height: 1.6;
+      `}>{content}</Grid>
     </Grid>
   );
 }
